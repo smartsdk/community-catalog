@@ -1,0 +1,5 @@
+name: Kurento Demo
+description: |
+  Media streaming demo
+version: 6.6.0-rancher1
+category: Media

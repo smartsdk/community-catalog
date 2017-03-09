@@ -1,0 +1,22 @@
+version: '2'
+services:
+  magic:
+    image: martel/kurento-magic-mirror-docker:latest
+    environment:
+      MAGICHOST: 192.168.99.102
+    stdin_open: true
+    tty: true
+    links:
+    - kurento:kurento
+    ports:
+    - 8443:8443/tcp
+    labels:
+      io.rancher.container.pull_image: always
+  kurento:
+    image: kurento/kurento-media-server:6.6.0
+    stdin_open: true
+    tty: true
+    ports:
+    - 8888:8888/tcp
+    labels:
+      io.rancher.container.pull_image: always

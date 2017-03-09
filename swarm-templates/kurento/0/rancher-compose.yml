@@ -1,0 +1,12 @@
+.catalog:
+  name: Kurento Demo
+  version: 6.6.0-rancher1
+  description: |
+    Kurento is a media streaming service
+  questions:
+    - variable: MAGICHOST
+      label: MAGICHOST
+      description: IP of the swarm manager
+      required: true
+      type: string
+      default: localhost
