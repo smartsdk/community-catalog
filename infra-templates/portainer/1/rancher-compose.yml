@@ -1,0 +1,18 @@
+.catalog:
+  name: "Portainer"
+  version: "1.11.4"
+  description: Open-source lightweight management UI for a Docker host or Swarm cluster
+  minimum_rancher_version: v1.5.0-rc1
+  questions:
+  - variable: PORTAINTER_TEMPLATES_URL
+    label: Portainer Templates URL
+    type: string
+    description: http[s] base url to Portainer Templates
+    required: true
+    default: https://raw.githubusercontent.com/portainer/templates/master/templates.json
+  - variable: PORTAINTER_LOGO_URL
+    label: Portainer Logo URL
+    type: string
+    description: http[s] base url to Portainer Logo
+    required: true
+    default: https://www.docker.com/sites/all/themes/docker/assets/images/brand-full.svg
