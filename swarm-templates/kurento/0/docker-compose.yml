@@ -10,6 +10,8 @@ services:
     - kurento:kurento
     ports:
     - 8443:8443/tcp
+    networks:
+    - frontend
     labels:
       io.rancher.container.pull_image: always
   kurento:
@@ -18,5 +20,11 @@ services:
     tty: true
     ports:
     - 8888:8888/tcp
+    networks:
+    - frontend
     labels:
       io.rancher.container.pull_image: always
+
+networks:
+  frontend:
+    driver: overlay
