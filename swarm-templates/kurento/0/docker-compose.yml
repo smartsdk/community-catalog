@@ -3,7 +3,7 @@ services:
   magic:
     image: martel/kurento-magic-mirror-docker:latest
     environment:
-      MAGICHOST: 192.168.99.102
+      MAGICHOST: ${MAGICHOST}
     stdin_open: true
     tty: true
     links:
